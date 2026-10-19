@@ -108,16 +108,24 @@ npm run start
 
 O projeto é compatível com Vercel e hospedagens que suportem Next.js 16 e Node 24. Não há `vercel.json` porque nenhuma configuração específica é necessária. Branch, preview, HTTPS, rollback e validação editorial estão em `docs/deployment.md`.
 
-## Postagens administráveis com Sanity
+## Postagens e painel editorial
 
-O módulo de postagens usa Sanity Studio embutido em `/gestao`, com autenticação e permissões do
-próprio Sanity. O feed público fica em `/postagens` e cada item em `/postagens/[slug]`. A rota legada
-`/noticias` redireciona permanentemente para a nova área.
+O feed público fica em `/postagens`, com fotos em carrossel, categorias e atualização automática.
+Responsáveis acessam `/gestao` com usuário e senha configurados no servidor. O formulário prepara
+as fotos, permite revisar a postagem e publica no Sanity. Não há senha embutida no código.
 
-A configuração técnica está em `docs/sanity-setup.md`. O manual para a equipe editorial está em
-`docs/manual-editorial-sanity.md`. Sem variáveis do Sanity, o site institucional continua funcionando
-e a área pública mostra o estado vazio previsto. A análise histórica de alternativas permanece em
-`docs/architecture/cms-readiness.md`.
+Publicar ou retirar uma postagem atualiza o cache do site, sem exigir novo deploy. O feed aberto
+consulta atualizações a cada 30 segundos. O webhook do Sanity permanece disponível para alterações
+realizadas fora do painel.
+
+A ativação técnica, o cadastro das variáveis de ambiente e as orientações de imagens estão em
+`docs/painel-postagens.md`. Para gerar as credenciais localmente, execute
+`node scripts/configure-editor.mjs`. O projeto Sanity, dataset e token Editor precisam estar
+configurados antes da liberação. As instruções anteriores de administração do Studio permanecem
+em `docs/sanity-setup.md` e `docs/manual-editorial-sanity.md` como referência técnica.
+
+Testes isolados do painel: `npx playwright test --config=playwright.editor.config.ts`.
+Os testes usam dados fictícios e não publicam no CMS institucional.
 
 ## Contribuição
 

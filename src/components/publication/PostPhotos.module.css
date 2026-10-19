@@ -1,0 +1,47 @@
+.gallery {
+  position: relative;
+  background: #edf1f4;
+  min-width: 0;
+}
+.frame {
+  aspect-ratio: 4 / 5;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide[hidden] {
+  display: none;
+}
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  background: white;
+}
+.controls button {
+  cursor: pointer;
+  width: 2.75rem;
+  min-height: 2.75rem;
+  border: 1px solid #c7cdd3;
+  border-radius: 50%;
+  background: white;
+  color: #112d48;
+  font-size: 1.2rem;
+}
+.controls span {
+  font-size: 0.8rem;
+  color: #425264;
+}
+.controls button:focus-visible {
+  outline: 3px solid #125b91;
+  outline-offset: 2px;
+}

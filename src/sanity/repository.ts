@@ -137,7 +137,7 @@ export class SanityContentRepository implements ContentRepository {
         { start, end: start + pageSize, category: options.category ?? null },
         options.preview
           ? { cache: "no-store" }
-          : { next: { revalidate: false, tags: ["sanity", "postagem"] } },
+          : { next: { revalidate: 30, tags: ["sanity", "postagem"] } },
       );
       const items = result.items.map(mapPost).filter((post): post is NewsPost => Boolean(post));
       return {
@@ -161,7 +161,7 @@ export class SanityContentRepository implements ContentRepository {
         publishedCategoriesQuery,
         {},
         {
-          next: { revalidate: false, tags: ["sanity", "categoria", "postagem"] },
+          next: { revalidate: 30, tags: ["sanity", "categoria", "postagem"] },
         },
       );
       return categories
@@ -183,7 +183,7 @@ export class SanityContentRepository implements ContentRepository {
         { slug },
         options.preview
           ? { cache: "no-store" }
-          : { next: { revalidate: false, tags: ["sanity", "postagem", `postagem:${slug}`] } },
+          : { next: { revalidate: 30, tags: ["sanity", "postagem", `postagem:${slug}`] } },
       );
       return mapPost(value);
     } catch {

@@ -6,6 +6,22 @@
   border-bottom: var(--border-subtle);
 }
 
+.feedIntro {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.feedIntro a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
 .controls h2 {
   font-size: var(--font-size-lg);
 }

@@ -12,7 +12,7 @@ export function getPublishedSanityClient() {
     ...config,
     apiVersion: sanityApiVersion,
     perspective: "published",
-    useCdn: true,
+    useCdn: false,
     token: getSanityReadToken(),
     requestTagPrefix: "obra-papa-joao-23",
   });
