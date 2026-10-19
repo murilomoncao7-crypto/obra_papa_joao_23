@@ -3,12 +3,15 @@ import { createClient } from "next-sanity";
 import { getSanityPublicConfig, sanityApiVersion } from "@/sanity/env";
 
 export function publishingConfigured() {
-  return Boolean(getSanityPublicConfig() && process.env.SANITY_EDITOR_TOKEN);
+  return Boolean(
+    getSanityPublicConfig() &&
+    (process.env.SANITY_EDITOR_TOKEN || process.env.SANITY_API_WRITE_TOKEN),
+  );
 }
 
 export function editorClient() {
   const config = getSanityPublicConfig();
-  const token = process.env.SANITY_EDITOR_TOKEN;
+  const token = process.env.SANITY_EDITOR_TOKEN || process.env.SANITY_API_WRITE_TOKEN;
   if (!config || !token) throw new Error("CMS_NOT_CONFIGURED");
   return createClient({ ...config, token, apiVersion: sanityApiVersion, useCdn: false });
 }
