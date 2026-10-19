@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  border: 0.125rem solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: var(--transition-color);
+}
+
+.button:hover {
+  transform: translateY(-0.125rem);
+}
+
+.primary {
+  background: var(--color-blue);
+  box-shadow: 0 0.55rem 1.25rem rgb(18 70 163 / 18%);
+  color: var(--color-on-dark);
+}
+
+.primary:hover {
+  background: var(--color-blue-bright);
+}
+
+.secondary {
+  border-color: var(--color-blue);
+  background: transparent;
+  color: var(--color-blue);
+}
+
+.secondary:hover {
+  background: var(--color-forest-soft);
+}
+
+.light {
+  background: var(--color-paper);
+  color: var(--color-blue);
+}
+
+.light:hover {
+  background: var(--color-lime);
+  color: var(--color-navy);
+}

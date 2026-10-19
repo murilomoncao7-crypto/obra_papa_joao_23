@@ -1,0 +1,19 @@
+.link {
+  color: var(--color-ink);
+  font-size: var(--font-size-sm);
+  font-weight: 650;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.35rem;
+  transition: var(--transition-color);
+}
+
+.link:hover,
+.link[data-active] {
+  color: var(--color-forest);
+  text-decoration-color: var(--color-gold);
+}
+
+.link[data-active] {
+  font-weight: 750;
+}

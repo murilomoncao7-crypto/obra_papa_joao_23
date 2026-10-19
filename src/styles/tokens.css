@@ -1,0 +1,91 @@
+:root {
+  /* Paleta “Céu em movimento”, inspirada na referência aprovada. */
+  --color-canvas: #fff9f0;
+  --color-paper: #ffffff;
+  --color-paper-muted: #edf7ff;
+  --color-ink: #17345d;
+  --color-ink-muted: #536987;
+  --color-forest: #1246a3;
+  --color-forest-deep: #0b357f;
+  --color-forest-soft: #dcefff;
+  --color-gold: #ffb84d;
+  --color-gold-deep: #a64d00;
+  --color-gold-soft: #fff0cf;
+  --color-border: #cfe0f2;
+  --color-border-strong: #8bb8e7;
+  --color-danger: #a52e37;
+  --color-on-dark: #ffffff;
+
+  --color-blue: #1246a3;
+  --color-blue-bright: #288be4;
+  --color-cyan: #69d2e7;
+  --color-lime: #b8e35d;
+  --color-orange: #ffb84d;
+  --color-cream: #fff9f0;
+  --color-navy: #0b357f;
+
+  /* Tipografia */
+  --font-body: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-heading: var(--font-manrope), "Segoe UI", sans-serif;
+  --font-accent: var(--font-bricolage), var(--font-manrope), sans-serif;
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-md: 1rem;
+  --font-size-lg: clamp(1.08rem, 1.5vw, 1.24rem);
+  --font-size-xl: clamp(1.45rem, 2.5vw, 2rem);
+  --font-size-2xl: clamp(2.8rem, 7.5vw, 6.5rem);
+  --line-height-tight: 0.94;
+  --line-height-heading: 1.08;
+  --line-height-body: 1.65;
+  --letter-spacing-label: 0.1em;
+
+  /* Espaçamento */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --width-content: 76rem;
+  --width-reading: 44rem;
+  --width-narrow: 32rem;
+
+  /* Bordas, formas e profundidade */
+  --border-width: 1px;
+  --border-subtle: var(--border-width) solid var(--color-border);
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-pill: 999px;
+  --shadow-sm: 0 0.75rem 2rem rgb(18 70 163 / 10%);
+  --shadow-md: 0 1.25rem 3.5rem rgb(18 70 163 / 16%);
+  --shadow-focus: 0 0 0 0.25rem rgb(105 210 231 / 45%);
+
+  --duration-fast: 140ms;
+  --duration-normal: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --transition-color:
+    color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+
+  --layer-base: 0;
+  --layer-header: 20;
+  --layer-skip-link: 100;
+
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+
+  --focus-color: var(--color-blue-bright);
+  --focus-width: 0.1875rem;
+  --focus-offset: 0.1875rem;
+}

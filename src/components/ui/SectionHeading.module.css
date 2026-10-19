@@ -1,0 +1,32 @@
+.heading {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-4);
+}
+
+.eyebrow {
+  width: fit-content;
+  padding: 0.42rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-lime);
+  color: var(--color-navy);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.description {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-lg);
+}
+
+.inverse h2,
+.inverse .description {
+  color: var(--color-on-dark);
+}
+
+.inverse .eyebrow {
+  background: var(--color-orange);
+  color: var(--color-navy);
+}

@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.content > div {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-4);
+}
+
+.content h2,
+.content p {
+  color: var(--color-on-dark);
+}
+
+.content p {
+  font-size: var(--font-size-lg);
+}

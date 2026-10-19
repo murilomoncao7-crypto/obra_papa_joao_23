@@ -1,0 +1,18 @@
+.content {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-6);
+}
+
+.content > p {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-lg);
+}
+
+.content .status {
+  padding-top: var(--space-5);
+  border-top: var(--border-subtle);
+  color: var(--color-gold-deep);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
