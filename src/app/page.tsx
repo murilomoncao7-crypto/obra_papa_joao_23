@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { draftMode } from "next/headers";
 import { PostCard } from "@/components/publication/PostCard";
+import { FeedRefresh } from "@/components/publication/FeedRefresh";
 import { PreviewModeBanner } from "@/components/publication/PreviewModeBanner";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
@@ -27,6 +28,7 @@ export default async function Home() {
 
   return (
     <>
+      <FeedRefresh />
       {preview ? <PreviewModeBanner /> : null}
       <section className={styles.hero} aria-labelledby="hero-title">
         <Container className={styles.heroGrid}>

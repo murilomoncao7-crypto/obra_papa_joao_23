@@ -1,6 +1,7 @@
 import { defineQuery } from "next-sanity";
 
 const imageProjection = `{
+  _type,
   "id": coalesce(_key, asset._ref),
   "src": asset->url,
   "width": asset->metadata.dimensions.width,

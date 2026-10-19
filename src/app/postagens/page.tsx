@@ -9,6 +9,7 @@ import { Section } from "@/components/ui/Section";
 import { contentRepository } from "@/content";
 import { createPageMetadata } from "@/lib/page-metadata";
 import styles from "./page.module.css";
+import { FeedRefresh } from "@/components/publication/FeedRefresh";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Postagens",
@@ -40,6 +41,7 @@ export default async function PostsPage({ searchParams }: Props) {
 
   return (
     <>
+      <FeedRefresh />
       {preview ? <PreviewModeBanner /> : null}
       <PageHeader
         breadcrumbs={[{ label: "Postagens" }]}
@@ -48,6 +50,10 @@ export default async function PostsPage({ searchParams }: Props) {
       />
       <Section>
         <Container>
+          <div className={styles.feedIntro}>
+            <p>Momentos, histórias e atividades da nossa comunidade.</p>
+            <Link href="/gestao">Acesso dos responsáveis</Link>
+          </div>
           {categories.length > 0 ? (
             <nav className={styles.controls} aria-label="Filtrar postagens por categoria">
               <h2>Filtrar por categoria</h2>

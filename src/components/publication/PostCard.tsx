@@ -1,9 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import type { NewsPost } from "@/content/types";
 import { formatPublicationDate } from "@/content/publication-utils";
 import styles from "./PostCard.module.css";
+import { PostPhotos } from "./PostPhotos";
+import type { PublicationImage } from "@/content/types";
 
 const statusLabels = {
   draft: "Rascunho",
@@ -13,19 +14,34 @@ const statusLabels = {
 };
 
 export function PostCard({ post, preview = false }: { post: NewsPost; preview?: boolean }) {
+  const images: PublicationImage[] = [
+    ...(post.coverImage
+      ? [
+          {
+            id: `${post.id}-capa`,
+            src: post.coverImage,
+            width: post.coverImageWidth ?? 1200,
+            height: post.coverImageHeight ?? 800,
+            alt: post.coverImageAlt,
+          },
+        ]
+      : []),
+    ...(post.gallery ?? []),
+  ].filter(
+    (image, index, all) => all.findIndex((candidate) => candidate.src === image.src) === index,
+  );
   return (
     <article className={styles.card}>
-      {post.coverImage ? (
-        <Link className={styles.imageLink} href={`/postagens/${post.slug}`} tabIndex={-1}>
-          <Image
-            src={post.coverImage}
-            alt={post.coverImageAlt}
-            width={post.coverImageWidth ?? 1200}
-            height={post.coverImageHeight ?? 800}
-            sizes="(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) 50vw, 33vw"
-          />
-        </Link>
-      ) : null}
+      <header className={styles.profile}>
+        <span className={styles.avatar} aria-hidden="true">
+          O
+        </span>
+        <div>
+          <strong>Obra Papa João XXIII</strong>
+          <span>{post.author || "Histórias da nossa comunidade"}</span>
+        </div>
+      </header>
+      <PostPhotos images={images} title={post.title} />
       <div className={styles.content}>
         <div className={styles.meta}>
           <Tag>{post.category}</Tag>
