@@ -8,6 +8,7 @@ O painel permanece bloqueado até que todas as configurações estejam disponív
 
 1. No projeto Sanity institucional, confirme o dataset de produção. Para dataset privado, configure também um token Viewer para a leitura pública no servidor.
 2. Crie um token Sanity com papel Editor para a aplicação. Guarde-o somente na variável sensível `SANITY_EDITOR_TOKEN` da Vercel, em Production. Nunca use prefixo `NEXT_PUBLIC_` para tokens.
+   Se a integração Sanity já estiver instalada na Vercel, reconecte o projeto incluindo **Production**, com **Sensitive** habilitado. O código reconhece automaticamente `SANITY_API_WRITE_TOKEN`, `SANITY_API_READ_TOKEN`, `SANITY_API_PROJECT_ID` e `SANITY_API_DATASET`; não é necessário revelar ou copiar os tokens da integração.
 3. Configure `NEXT_PUBLIC_SANITY_PROJECT_ID`, `NEXT_PUBLIC_SANITY_DATASET` e `NEXT_PUBLIC_SITE_URL`. Configure `SANITY_API_TOKEN` com o token Viewer quando necessário. O navegador não precisa de acesso de escrita ao CMS.
 4. Execute `node scripts/configure-editor.mjs` no computador do administrador. Informe o usuário e a senha desejados. A senha não aparece na tela; o script gera o hash e uma chave de sessão no `.env.local`, ignorado pelo Git.
 5. Copie `EDITOR_USERNAME`, `EDITOR_PASSWORD_HASH` e `EDITOR_SESSION_SECRET` para as variáveis de Production da Vercel. Marque-as como sensíveis. Não envie os valores em conversas, tickets ou commits.
