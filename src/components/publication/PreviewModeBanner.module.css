@@ -1,0 +1,33 @@
+.banner {
+  position: sticky;
+  z-index: 15;
+  top: 0;
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  background: #0b357f;
+  color: #fff;
+  text-align: center;
+}
+
+.banner button {
+  min-height: 2.75rem;
+  padding: 0.55rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #b8e35d;
+  color: #0b357f;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 36rem) {
+  .banner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,57 @@
+.content {
+  display: grid;
+  gap: var(--space-5);
+  color: var(--color-ink);
+  font-size: var(--font-size-lg);
+}
+
+.content h2,
+.content h3 {
+  margin-top: var(--space-8);
+}
+
+.content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.content h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.content ul,
+.content ol {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: var(--space-6);
+}
+
+.content blockquote {
+  padding: var(--space-5) var(--space-6);
+  border-left: 0.35rem solid var(--color-cyan);
+  background: var(--color-paper-muted);
+  color: var(--color-navy);
+  font-family: var(--font-accent);
+  font-size: var(--font-size-xl);
+}
+
+.content a {
+  color: var(--color-forest-deep);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+.content figure {
+  margin-block: var(--space-6);
+}
+
+.content figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.content figcaption {
+  padding-top: var(--space-3);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-sm);
+}

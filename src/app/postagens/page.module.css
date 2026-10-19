@@ -1,0 +1,113 @@
+.controls {
+  display: grid;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+  padding-bottom: var(--space-8);
+  border-bottom: var(--border-subtle);
+}
+
+.controls h2 {
+  font-size: var(--font-size-lg);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.filters a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0.55rem 0.9rem;
+  border: var(--border-subtle);
+  border-radius: var(--radius-pill);
+  background: var(--color-paper);
+  color: var(--color-forest-deep);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.filters a[aria-current="page"] {
+  border-color: var(--color-navy);
+  background: var(--color-navy);
+  color: var(--color-on-dark);
+}
+
+.notice,
+.empty {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-3);
+  padding: var(--space-8);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-paper);
+}
+
+.notice {
+  margin-bottom: var(--space-8);
+  border-color: var(--color-gold);
+  background: var(--color-gold-soft);
+}
+
+.empty h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+
+.pagination a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-blue);
+  color: var(--color-on-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pagination span {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-sm);
+}
+
+@media (min-width: 40rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 36rem) {
+  .pagination {
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pagination a {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,20 @@
+.configuration {
+  display: grid;
+  min-height: 100dvh;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #fff9f0;
+  color: #17345d;
+  font-family: system-ui, sans-serif;
+}
+
+.configuration h1 {
+  max-width: 24ch;
+  color: #0b357f;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.configuration p {
+  max-width: 60ch;
+}

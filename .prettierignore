@@ -1,0 +1,7 @@
+.next
+node_modules
+public/images
+legacy-assets
+coverage
+playwright-report
+test-results

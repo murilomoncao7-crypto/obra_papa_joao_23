@@ -1,0 +1,34 @@
+h1,
+h2,
+h3 {
+  color: var(--color-navy);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: var(--line-height-heading);
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-family: var(--font-accent);
+  font-size: clamp(2.1rem, 4vw, 3.75rem);
+}
+
+h3 {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-xl);
+}
+
+p,
+li {
+  max-width: 72ch;
+}
+
+strong {
+  font-weight: 800;
+}

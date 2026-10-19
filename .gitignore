@@ -15,26 +15,34 @@ $RECYCLE.BIN/
 *.sln
 *.sw?
 
-# Node.js dependencies and package manager caches
-node_modules/
+# Dependencies and package manager caches
+/node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 .npm/
 .pnpm-store/
-.yarn/cache/
-.yarn/unplugged/
-.yarn/build-state.yml
-.yarn/install-state.gz
 
-# Next.js and build outputs
-.next/
-out/
-dist/
-build/
-.turbo/
-coverage/
+# Next.js, builds, tests, and caches
+/.next/
+/out/
+/build/
+/dist/
+/.turbo/
+/coverage/
+/playwright-report/
+/test-results/
+.cache/
+.eslintcache
+*.tsbuildinfo
+next-env.d.ts
 
 # Environment files and credentials
-.env
-.env.*
+.env*
 !.env.example
 *.pem
 *.key
@@ -50,10 +58,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Miscellaneous caches and temporary files
-.cache/
-.eslintcache
-*.tsbuildinfo
+# Hosting and temporary files
+.vercel/
 *.tmp
 *.temp
 
+.vercel

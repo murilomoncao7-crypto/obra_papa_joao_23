@@ -1,0 +1,108 @@
+.empty {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-4);
+  padding: var(--space-8) 0;
+  border-block: var(--border-subtle);
+}
+.empty p,
+.summary,
+.content {
+  color: var(--color-ink-muted);
+}
+.list {
+  display: grid;
+  gap: var(--space-10);
+}
+.item {
+  display: grid;
+  gap: var(--space-4);
+  padding-bottom: var(--space-8);
+  border-bottom: var(--border-subtle);
+}
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+.itemMeta,
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-sm);
+}
+.detail {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-8);
+}
+.content {
+  display: grid;
+  gap: var(--space-5);
+  font-size: var(--font-size-lg);
+}
+.content section {
+  display: grid;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: var(--border-subtle);
+}
+.campaignCallout {
+  display: grid;
+  max-width: var(--width-reading);
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-forest-soft);
+}
+.campaignCallout > span {
+  justify-self: start;
+}
+.campaignCallout p {
+  color: var(--color-ink-muted);
+}
+.image {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border-bottom: 0.25rem solid var(--color-gold);
+  background: var(--color-paper-muted);
+}
+.image img {
+  object-fit: contain;
+}
+.fields {
+  display: grid;
+  border-top: var(--border-subtle);
+}
+.fields div {
+  display: grid;
+  gap: var(--space-2);
+  padding-block: var(--space-4);
+  border-bottom: var(--border-subtle);
+}
+.fields dt {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+.fields dd {
+  color: var(--color-forest-deep);
+}
+@media (min-width: 48rem) {
+  .item {
+    grid-template-columns: 10rem 1fr;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .campaignCallout {
+    padding: var(--space-6);
+  }
+}

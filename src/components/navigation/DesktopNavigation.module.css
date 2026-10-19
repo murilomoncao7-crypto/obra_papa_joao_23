@@ -1,0 +1,27 @@
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  color: var(--color-blue);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.35rem;
+  transition: var(--transition-color);
+}
+
+.navigation a:hover {
+  color: var(--color-blue-bright);
+  text-decoration-color: var(--color-cyan);
+}
+
+@media (max-width: 71.99rem) {
+  .navigation {
+    display: none;
+  }
+}

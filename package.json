@@ -1,0 +1,56 @@
+{
+  "name": "obra-papa-joao-xxiii",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . && prettier --check \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.{ts,mts,mjs,json}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.{ts,mts,mjs,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"tests/**/*.{ts,tsx}\" \"*.{ts,mts,mjs,json}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "check:links": "playwright test tests/e2e/links.spec.ts",
+    "validate:content": "vitest run src/content src/sanity",
+    "sanity:dev": "sanity dev"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "dependencies": {
+    "@portabletext/react": "^8.0.0",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/ui": "^4.0.5",
+    "@sanity/vision": "^6.10.1",
+    "next": "16.3.0",
+    "next-sanity": "^13.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "sanity": "^6.10.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.6",
+    "typescript": "^5",
+    "vitest": "^4.1.10"
+  },
+  "overrides": {
+    "@vercel/frameworks": {
+      "js-yaml": "3.15.1",
+      "smol-toml": "1.6.1"
+    }
+  }
+}

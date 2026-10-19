@@ -1,0 +1,38 @@
+@import "../styles/reset.css";
+@import "../styles/tokens.css";
+@import "../styles/typography.css";
+@import "../styles/utilities.css";
+
+body {
+  min-height: 100vh;
+  overflow-x: clip;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  overflow: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+dd,
+a {
+  overflow-wrap: anywhere;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--focus-color);
+  outline-offset: var(--focus-offset);
+}
